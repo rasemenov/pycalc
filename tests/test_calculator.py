@@ -4,7 +4,7 @@ This module contains functions intended to verify expected behaviour of the
 """
 import unittest
 import unittest.mock as mock
-from pycalc.tools.calculator import ExpressionCalculator
+from pycalc.tools import ExpressionCalculator
 from pycalc.tools.exceptions import PyCalcBaseException
 
 
