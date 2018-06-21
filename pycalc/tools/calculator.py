@@ -72,10 +72,14 @@ class ExpressionCalculator:
                 if len(result_list) > 0:
                     if result_list[-1] == 'func':
                         result_list.pop()
-                        if isinstance(operand, list):
-                            operand = self.func_stack.pop()(*operand)
-                        else:
-                            operand = self.func_stack.pop()(operand)
+                        try:
+                            if isinstance(operand, list):
+                                operand = self.func_stack.pop()(*operand)
+                            else:
+                                operand = self.func_stack.pop()(operand)
+                        except TypeError:
+                            raise PyCalcBaseException('Your function have '
+                                                      'another signature.')
             if operand is not None:
                 self._append_result(result_list, operand)
                 operand = None
