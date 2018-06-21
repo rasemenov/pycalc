@@ -6,7 +6,7 @@ Contains classes:
 import string
 from importlib import import_module
 import pycalc.tools.settings as rules
-from pycalc.tools import sorting_function
+from pycalc.tools.utils import sorting_function
 from pycalc.tools.exceptions import PyCalcBaseException
 
 
