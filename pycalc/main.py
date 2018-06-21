@@ -6,8 +6,8 @@ Contains functions:
 - main;
 """
 import argparse
-from pycalc.tools import ExpressionCalculator
-from pycalc.tools import ExpressionParser
+from pycalc.tools.calculator import ExpressionCalculator
+from pycalc.tools.parser import ExpressionParser
 from pycalc.tools.exceptions import PyCalcBaseException
 
 
