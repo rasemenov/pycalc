@@ -60,13 +60,3 @@ class TestMain(unittest.TestCase):
         mock_calc.return_value = mock.Mock(explore_data=explore_data)
         main(['1'])
         self.assertEqual('1', self.buffer.getvalue().strip())
-
-    @mock.patch('pycalc.main.ExpressionParser')
-    def test_main_exception(self, mock_parser):
-        """
-        Check that function handles exceptions.
-        """
-        mock_parser.side_effect = PyCalcBaseException('oops')
-        with self.assertRaises(PyCalcBaseException) as err:
-            main(['1'])
-        self.assertEqual('ERROR: oops', err.exception.message)
