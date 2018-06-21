@@ -35,12 +35,12 @@ def main(*args):
     """
     Orchestrate creation of 'ExpressionParser' and 'ExpressionCalculator'
     classes and pass created instances parsed arguments.
-    Print results of expression. Exceptions must be caught from outside.
+    Print results of expression. 
     :param args: inserted to call from scripts.
     """
-    args = parse_args(*args)
-    parser = ExpressionParser()
     try:
+        args = parse_args(*args)
+        parser = ExpressionParser()
         calc = ExpressionCalculator(args[1][0], parser.parse_input(args[1][0]),
                                     args[0].module)
         print(calc.explore_data(calc.exp_list))
