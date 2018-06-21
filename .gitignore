@@ -1,0 +1,8 @@
+/venv*
+/.idea*
+/.coverage
+__*/
+/test_run.py
+/home*
+/*.pyc
+*.pyc

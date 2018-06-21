@@ -1,0 +1,4 @@
+include *.md
+recursive-exclude __pycache__ *.pyc
+include *.txt
+recursive-include tests *.py
