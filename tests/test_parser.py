@@ -6,8 +6,8 @@ Includes classes:
 """
 import unittest
 import unittest.mock as mock
-from pycalc.tools import ExpressionParser
-from pycalc.tools import MATH_OPERATORS
+from pycalc.tools.parser import ExpressionParser
+from pycalc.tools.settings import MATH_OPERATORS
 from pycalc.tools.exceptions import PyCalcBaseException
 
 
